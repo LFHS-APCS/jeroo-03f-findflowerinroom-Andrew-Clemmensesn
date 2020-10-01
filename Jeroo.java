@@ -1,13 +1,21 @@
 /**
  * Put your Jeroo methods in this class.
- * @author Steve Aronson
+ * @author Andrew Clemmensen
  */
 public class Jeroo extends JerooBase {
     
     /**
      */
     public void findFlowerInRoom() {
-
+        while (!isFlower(HERE)) {
+            if (!isWater(AHEAD)) {
+                hop();
+            } else {
+                turn(LEFT);
+                hop();
+                turn(LEFT);
+            }
+        }
     }
 
 
