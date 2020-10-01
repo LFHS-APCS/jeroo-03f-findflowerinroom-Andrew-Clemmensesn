@@ -23,13 +23,10 @@ public class Jeroo extends JerooBase {
         while (!isFlower(HERE)) {
             if (!isWater(AHEAD)) {
                 hop();
-            } else {
+            } else if (isFacing(SOUTH)) {
                 turn(LEFT);
                 hop();
                 turn(LEFT);
-            }
-            if (!isWater(AHEAD)) {
-                hop();
             } else {
                 turn(RIGHT);
                 hop();
