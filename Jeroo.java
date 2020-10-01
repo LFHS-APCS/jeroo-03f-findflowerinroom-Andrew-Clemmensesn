@@ -15,6 +15,13 @@ public class Jeroo extends JerooBase {
                 hop();
                 turn(LEFT);
             }
+            if (!isWater(AHEAD)) {
+                hop();
+            } else {
+                turn(RIGHT);
+                hop();
+                turn(RIGHT);
+            }
         }
     }
 
